@@ -18,7 +18,10 @@ const BinaryComponent = ({binary, setBinary, maxLength}) => {
   return (
     <>
       <input type="text" placeholder='binary' value={binary} onChange={handleChange} />
-      {errorTyped && <span className='error'>Not a 0 or a 1</span>}
+      {errorTyped && 
+      <span className='error'>
+        Not a <strong>0</strong> or a <strong>1</strong>
+      </span>}
     </>
   )
 }
@@ -41,6 +44,8 @@ function App() {
   const [binary, setBinary] = useState("");
   return (
     <div className="App">
+      <h1>Bin2Dec</h1>
+      <h2>Binary to Decimal converter</h2>
       <div id='binaryContainer'>
         <span className='titleComponent'>Binary </span>
         <BinaryComponent binary={binary} setBinary={setBinary} maxLength="8" />
