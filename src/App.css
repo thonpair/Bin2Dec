@@ -8,9 +8,16 @@
   font-family: 'Press Start 2P', cursive;
 }
 
+input{
+color: lightgreen;
+background-color: black;
+font-family: inherit;
+font-size: 1.1em;
+}
+
 .error{
   color: red;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .titleComponent{
