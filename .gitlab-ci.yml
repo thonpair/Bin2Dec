@@ -9,7 +9,7 @@ build:
   stage: build
   variables: 
     # Replace this with your site URL
-    PUBLIC_URL: https://jsramblings.gitlab.io/coffee-corner/  
+    PUBLIC_URL: https://thonpair.gitlab.io/bin2dec/  
   script:
     - yarn install      
     - yarn build
