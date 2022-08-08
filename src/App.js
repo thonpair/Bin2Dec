@@ -17,8 +17,17 @@ const BinaryComponent = ({binary, setBinary}) => {
   )
 }
 
-const DecimalComponent = () => {
-  return (<>Decimal</>)
+const DecimalComponent = ({binary}) => {
+  const decimal = () => {
+    let result = 0;
+    let mult = 1;
+    for (let i = binary.length - 1; i >= 0 ; i--){
+      result += parseInt(binary[i]) * mult;
+      mult *= 2;
+    }
+    return result;
+  };
+  return (<>{decimal()}</>)
 }
 
 
@@ -27,8 +36,7 @@ function App() {
   return (
     <div className="App">
       <BinaryComponent binary={binary} setBinary={setBinary} />
-      {binary}
-      <DecimalComponent />
+      <DecimalComponent binary={binary} />
     </div>
   );
 }
