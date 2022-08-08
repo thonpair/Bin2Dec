@@ -1,3 +1,8 @@
 .App {
   text-align: center;
+  display: grid;
+}
+
+.titleComponent{
+  font-size: 1.5em;
 }
