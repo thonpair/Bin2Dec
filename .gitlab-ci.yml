@@ -1,15 +1,22 @@
+# Stages run sequentially, so we add a new `deploy` stage 
+# after the `build` one
 stages:
   - build
   - deploy
+
 build:
-  image: node:latest    # Run the job in a `node` docker image
+  image: node:latest    
   stage: build
+  variables: 
+    # Replace this with your site URL
+    PUBLIC_URL: https://jsramblings.gitlab.io/coffee-corner/  
   script:
-    - npm install      # Run `yarn install` and `yarn build`
-    - npm run build
+    - yarn install      
+    - yarn build
   artifacts:
     paths:
-      - build/          # Save the build result as an artfact
+      - build/    
+  
 pages:
   image: alpine:latest
   stage: deploy
