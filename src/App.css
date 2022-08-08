@@ -2,14 +2,13 @@
   text-align: center;
   margin: 2em auto;
   max-width: 1024px;
-  display: grid;
   color: whitesmoke;
   border: 5px solid white;
   font-family: 'Press Start 2P', cursive;
 }
 
 input{
-color: lightgreen;
+  color: lightgreen;
 background-color: black;
 font-family: inherit;
 font-size: 1.1em;
@@ -22,4 +21,9 @@ font-size: 1.1em;
 
 .titleComponent{
   font-size: 1.5em;
+}
+
+.container{
+  display: flex;
+  
 }
