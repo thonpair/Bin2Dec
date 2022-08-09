@@ -19,12 +19,19 @@ input {
 }
 
 .error {
-  color: red;
-  font-size: 1em;
+  background-color: red;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.description{
+  padding: 1em;
+  margin-top: 1em;
 }
 
 .titleComponent {
   font-size: 1.5em;
+  line-height: 2em;
 }
 
 #binaryContainer {

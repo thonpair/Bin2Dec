@@ -17,11 +17,12 @@ const BinaryComponent = ({ binary, setBinary, maxLength }) => {
   }
   return (
     <>
-      <input type="text" placeholder='binary' value={binary} onChange={handleChange} />
+      <input type="text" value={binary} onChange={handleChange} />
       {errorTyped &&
-        <span className='error'>
+        <div className='error'>
           Not a <strong>0</strong> or a <strong>1</strong>
-        </span>}
+        </div>}
+      {!errorTyped && <div className='description'>Write a 0 or a 1</div> }
     </>
   )
 }
