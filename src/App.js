@@ -3,26 +3,31 @@ import './App.css';
 
 const BinaryComponent = ({ binary, setBinary, maxLength }) => {
   let [errorTyped, setErrorTyped] = useState(false);
+  let [errorLen, setErrorLen] = useState(false);
   const handleChange = (e) => {
     const value = e.target.value;
     const lastTyped = value[value.length - 1];
     /** Only allow 0,1 or empty ; with a max length = 8 */
+    setErrorLen(!(value.length <= parseInt(maxLength)));
+    setErrorTyped(!(lastTyped === "0" || lastTyped === "1" || value === ""))
     if ((lastTyped === "0" || lastTyped === "1" || value === "")
       && value.length <= parseInt(maxLength)) {
       setBinary(value);
       setErrorTyped(false);
-    } else {
-      setErrorTyped(true);
     }
   }
   return (
     <>
       <input type="text" value={binary} onChange={handleChange} />
-      {errorTyped &&
+      {errorTyped && ! errorLen &&
         <div className='error'>
           Not a <strong>0</strong> or a <strong>1</strong>
         </div>}
-      {!errorTyped && <div className='description'>Write a 0 or a 1</div> }
+      {errorLen &&
+        <div className='error'>
+          Max 8 caracters
+        </div>}
+      {!errorTyped && !errorLen && <div className='description'>Write a 0 or a 1</div>}
     </>
   )
 }
