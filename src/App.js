@@ -18,7 +18,7 @@ const BinaryComponent = ({ binary, setBinary, maxLength }) => {
   }
   return (
     <>
-      <input type="text" value={binary} onChange={handleChange} />
+      <input type="text" value={binary} onChange={handleChange} aria-label="Write binary number" />
       {errorTyped && ! errorLen &&
         <div className='error'>
           Not a <strong>0</strong> or a <strong>1</strong>
