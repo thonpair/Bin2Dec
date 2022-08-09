@@ -44,9 +44,11 @@ function App() {
   const [binary, setBinary] = useState("");
   return (
     <div className="App">
-      <h1>Bin2Dec</h1>
-      <h2>Binary to Decimal converter</h2>
-      <div className='container'>
+      <header>
+        <h1>Bin2Dec</h1>
+        <h2>Binary to Decimal converter</h2>
+      </header>
+      <div id='container'>
         <div id='binaryContainer' className='block'>
           <span className='titleComponent'>Binary </span>
           <BinaryComponent binary={binary} setBinary={setBinary} maxLength="8" />
