@@ -61,7 +61,9 @@ function App() {
         </div>
         <div id='decimalContainer' className='block'>
           <span className='titleComponent'>to Decimal</span>
-          <DecimalComponent binary={binary} />
+          <div id="decimalComponent">
+            <DecimalComponent binary={binary} />
+          </div>
         </div>
       </div>
     </div>
