@@ -15,7 +15,7 @@ input {
   background-color: black;
   font-family: inherit;
   font-size: 1.1em;
-  width: 100%;
+  width: 80%;
 }
 
 .error {
@@ -36,7 +36,7 @@ input {
 }
 
 .block {
-  width: 100%;
+  padding: 15px;
   border: 5px solid white;
   border-top: 0px;
 }
@@ -54,5 +54,8 @@ input {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "binary decimal";
+  }
+  #decimalContainer{
+    border-left: 0px;
   }
 }
