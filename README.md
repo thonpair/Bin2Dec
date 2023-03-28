@@ -32,3 +32,7 @@ constraints:
 ## Useful links and resources
 
 [Binary number system](https://en.wikipedia.org/wiki/Binary_number)
+
+## Solution
+
+[My solution](https://bin2dec.hemer.it/)
